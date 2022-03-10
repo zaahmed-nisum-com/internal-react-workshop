@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 
 function Lecture_2(props) {
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
 
   return (
     <div>
+      <p>email</p>
       <input
         type="text"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
+      <p>password</p>
       <input
         type="password"
         value={password}

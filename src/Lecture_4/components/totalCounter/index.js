@@ -1,6 +1,7 @@
 import React from "react";
 
-const TotalCounter = React.memo((props) => {
+// const TotalCounter = (props) => {
+  const TotalCounter = React.memo((props) => {
   return (
     <div>
       {console.log(props.total)}

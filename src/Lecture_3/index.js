@@ -1,10 +1,9 @@
-import React, {  } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import EmployeesList from "./EmployeesList";
 import PatientsList from "./PatientsList";
+import EmployeesList from "./EmployeesList";
 
 function Lecture_3(props) {
- 
   return (
     <Router>
       <div>
@@ -34,8 +33,17 @@ function Lecture_3(props) {
         </nav>
       </div>
       <Routes>
-        <Route exact path="/employee" element={<EmployeesList />} />
+        <Route path="/employee" element={<EmployeesList />} />
+        <Route
+          path="/employee/create"
+          element={
+            <div>
+              <p>employee create</p>
+            </div>
+          }
+        />
         <Route path="/patient" element={<PatientsList />} />
+        <Route path="/" />
       </Routes>
     </Router>
   );

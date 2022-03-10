@@ -1,13 +1,17 @@
-import React, { useEffect, useRef } from "react";
-import './style.css'
+import React, { useEffect, useRef, useState } from "react";
+import "./style.css";
 
 function EmployeesList(props) {
-  const counterRef = useRef(null);
+  // const counterRef = useRef(null);
+  // const [counter, setcounter] = useState(0);
+  // useEffect(() => {
+  //   console.log("component did mount");
+  // });
   useEffect(() => {
     console.log("component did mount EmployeesList");
-    setTimeout(() => {
-        counterRef.current.className = 'counter_tag'
-    }, 2000);
+    // setTimeout(() => {
+    //     // counterRef.current.className = 'counter_tag'
+    // }, 2000);
     return () => {
       console.log("component un mount EmployeesList");
     };
@@ -20,8 +24,9 @@ function EmployeesList(props) {
   });
   return (
     <div>
+      {/* <button onClick={() => setcounter(counter+1)}>click me</button> */}
       <p>Employee</p>
-      <p ref={counterRef}>P tag</p>
+      {/* <p ref={counterRef}>P tag</p> */}
     </div>
   );
 }
