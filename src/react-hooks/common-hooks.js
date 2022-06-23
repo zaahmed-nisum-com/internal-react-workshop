@@ -1,10 +1,19 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 
 function CommonHooks(props) {
   const [toDoList, setToDoList] = useState([]);
   const [value, setValue] = useState("");
   const [actionsPerforms, setActionPerforms] = useState(0);
 
+  useLayoutEffect(() => {
+    console.log("useLayoutEffect");
+  }, []);
+
+  useEffect(() => {
+    console.log("useEffect");
+  }, []);
+  
   const handleAdd = useCallback(() => {
     try {
       let tempList = toDoList;
@@ -15,6 +24,17 @@ function CommonHooks(props) {
       console.log(error);
     }
   });
+
+  // const handleAdd = useCallback(() => {
+  //   try {
+  //     let tempList = toDoList;
+  //     toDoList.push({ id: toDoList.length + 1, value });
+  //     setToDoList([...tempList]);
+  //     setValue("");
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // });
 
   const handleDelete = useCallback((id) => {
     try {

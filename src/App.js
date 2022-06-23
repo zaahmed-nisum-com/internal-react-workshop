@@ -8,13 +8,16 @@ import { CalculateFactorial } from "./react-hooks/use-memo";
 import UseStateHook from "./react-hooks/use-state";
 
 function App() {
+  // const { data, loading } = useApi(
+  //   "https://jsonplaceholder.typicode.com/posts"
+  // );
   // const { data, loading } = useApi("https://jsonplaceholder.typicode.com/posts");
   // console.log(data,'=====',loading);
   // return <CommonHooks />;
   // return <MemorizeHook />;
   // return <UseEffectHook />;
   // return <CalculateFactorial/>
-  return <UseStateHook/>
+  // return <UseStateHook/>
   return null;
 }
 

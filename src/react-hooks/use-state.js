@@ -1,16 +1,24 @@
 import React, { useState } from "react";
+import useApi from "./custom-hooks/useApi";
 
 function UseStateHook(props) {
+  console.log("UseStateHook")
+
+  const { data, loading } = useApi(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+  console.log(data,'=====',loading);
+
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [randomNumber, setRandomNumber] = useState(0);
-  let randomNumber = 0;
+  const [randomNumber, setRandomNumber] = useState(0);
+  // let randomNumber = 0;
 
   const handleRandomNumber = (e) => {
     console.log(e.target.value);
-    // setRandomNumber(e.target.value);
-    randomNumber = e.target.value;
+    setRandomNumber(e.target.value);
+    // randomNumber = e.target.value;
   };
 
   return (

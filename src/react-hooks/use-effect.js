@@ -7,9 +7,18 @@ function UseEffectHook(props) {
 
   let secondsCounterIntervel = null;
 
+  // useEffect(()=>{
+  //   console.log("useEffect")
+  // })
+
   useEffect(() => {
     setActions(actions + 1);
+    console.log("counter");
   }, [counter]);
+
+  useEffect(() => {
+    console.log("useEffect once");
+  }, []);
 
   useEffect(() => {
     secondsCounterIntervel = setInterval(() => {
