@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const useApi = (url) => {
-  //   const [loading, setLoading] = useState(true);
-  //   const [data, setData] = useState(null);
   const [data, setData] = useState({
     loading: false,
     data: null,
@@ -22,7 +20,7 @@ const useApi = (url) => {
     } catch (error) {
       console.log(error);
     } finally {
-        
+
     }
   };
 
